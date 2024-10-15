@@ -23,8 +23,12 @@ const Footer = () => {
           <h1 className='text-lg font-semibold text-gray-700 cursor-default font-poppins'>© 2024 · SANDIES CAKES</h1>
         </div>
         <div className='flex items-center justify-between gap-3'>
-          <FaFacebook size={30} className='cursor-pointer hover:text-pink-700'/>
-          <FaInstagram size={30} className='cursor-pointer hover:text-pink-700'/>
+          <a href="https://www.facebook.com/profile.php?id=61555702144248" target='_blank' rel="noreferrer">
+            <FaFacebook size={30} className='cursor-pointer hover:text-pink-700'/>
+          </a>
+          <a href="https://www.instagram.com/sandies_._" target='_blank' rel="noreferrer">
+            <FaInstagram size={30} className='cursor-pointer hover:text-pink-700'/>
+          </a>
           <FaWhatsapp onClick={handleButtonClick} size={30} className='cursor-pointer hover:text-pink-700'/>
         </div>
       </div>
