@@ -59,8 +59,8 @@ const Hero = () => {
                     <div className='w-full h-full'>
                         <img src={slide.image} alt="" className='h-[99vh] w-full object-cover' />
                         <div className='inset-0 absolute h-[99vh] bg-black/60 flex flex-col justify-center items-center'>
-                            <h1 className='text-white text-5xl sm:text-6xl text-center md:text-7xl lg:text-8xl uppercase font-bold'>{slide.heading}</h1>
-                            <p className='text-2xl mt-5 text-gray-300 text-center lg:w-full w-[90%] md:w-[80%] mx-auto'>{slide.text}</p>
+                            <h1 className='text-white text-5xl sm:text-6xl text-center md:text-7xl lg:text-8xl uppercase font-bold font-overpass'>{slide.heading}</h1>
+                            <p className='text-2xl mt-5 text-gray-300 text-center lg:w-full w-[90%] md:w-[80%] mx-auto font-poppins'>{slide.text}</p>
                         </div>
                     </div>
 

@@ -5,7 +5,9 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      diplomata: ["Diplomata SC", "sans-serif"]
+      diplomata: ["Diplomata SC", "sans-serif"],
+      overpass: ["Overpass", "sans-serif"],
+      poppins: ['Poppins', 'sans-serif'],
     },
     extend: {},
   },

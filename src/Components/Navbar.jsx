@@ -33,7 +33,7 @@ const Navbar = () => {
       };
 
   return (
-    <div className='w-full fixed z-50 bg-white/90 top-0'>
+    <div className='w-full fixed z-50 bg-white/90 top-0 font-overpass'>
         <div className='w-[90%] md:w-[95%] lg:w-[80%] mx-auto flex items-center justify-between h-[100px] '>
             <div>
                 <Link to='/'>

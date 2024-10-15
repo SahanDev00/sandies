@@ -21,10 +21,10 @@ const Product = ({ product }) => {
                 </div>
             </div>
             <div className=' h-full flex flex-col justify-center md:ml-5 md:mt-0 mt-5'>
-                <h1 className='text-xl md:text-3xl text-pink-400 uppercase font-semibold text-center md:mb-10'>{product.name}</h1>
-                <p className='text-lg mt-2 text-green-600 font-medium'>Rs: {product.price}</p>
-                <p className='w-[90%] text-gray-600 text-lg'>{product.description}</p>
-                <button onClick={handleOrderClick} className='w-[100px] py-2 bg-pink-600 hover:bg-pink-600/90 mt-4 rounded text-white'>Order Now</button>
+                <h1 className='text-xl md:text-3xl text-pink-400 uppercase font-semibold text-center md:mb-10 font-overpass'>{product.name}</h1>
+                <p className='text-lg mt-2 text-green-600 font-medium font-poppins'>Rs: {product.price}</p>
+                <p className='w-[90%] text-gray-600 text-lg font-poppins'>{product.description}</p>
+                <button onClick={handleOrderClick} className='w-[110px] py-2 bg-pink-600 hover:bg-pink-600/90 mt-4 rounded text-white font-poppins'>Order Now</button>
             </div>
         </div>
     </div>

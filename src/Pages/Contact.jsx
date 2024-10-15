@@ -63,9 +63,9 @@ const Contact = () => {
       />
       <div className='absolute inset-0 flex items-center justify-center'>
         <div className='mt-24 sm:mt-0 h-[500px] sm:h-[600px] md:h-[550px] w-[95%] sm:w-[90%] md:w-[700px] flex flex-col items-center justify-center rounded-2xl shadow-xl bg-white/95'>
-          <h1 className='text-3xl font-semibold text-gray-600'>Send Us a Message</h1>
+          <h1 className='text-3xl font-semibold text-gray-600 font-overpass'>Send Us a Message</h1>
           <form className='flex flex-col mt-2 sm:mt-5 w-[80%]' onSubmit={handleSubmit}>
-            <label className='text-lg text-gray-500'>Name</label>
+            <label className='text-[16px] text-gray-500 font-poppins'>Name</label>
             <input
               type='text'
               name='from_name'
@@ -75,7 +75,7 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-            <label className='text-lg text-gray-500 mt-2'>Mobile Number</label>
+            <label className='text-[16px] text-gray-500 mt-3 font-poppins'>Mobile Number</label>
             <input
               type='text'
               name='number'
@@ -85,7 +85,7 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-            <label className='text-lg text-gray-500 mt-2'>Your Message</label>
+            <label className='text-[16px] text-gray-500 mt-3 font-poppins'>Your Message</label>
             <textarea
               name='message'
               className='pl-4 h-[75px] bg-pink-500/30 rounded text-gray-700'
@@ -93,11 +93,11 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
-            <button type='submit' className='px-4 py-3 bg-pink-500/90 mt-5 w-32 rounded text-white font-semibold hover:bg-pink-500'>
+            <button type='submit' className='px-4 py-3 font-poppins bg-pink-500/90 mt-5 w-32 rounded text-white font-semibold hover:bg-pink-500'>
               SUBMIT
             </button>
           </form>
-          <h1 className='text-lg font-semibold my-2 sm:my-5'>OR</h1>
+          <h1 className='text-lg font-semibold my-2 sm:my-5 font-overpass'>OR</h1>
           <FaWhatsapp
             onClick={handleButtonClick}
             size={30}
