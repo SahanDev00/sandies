@@ -14,9 +14,9 @@ const Product = ({ product }) => {
         <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='w-full h-full'>
                 <img src={mainPic} alt="" className='p-2 object-cover w-full' />
-                <div className='w-[104px] h-[100px] flex items-center'>
+                <div className='grid grid-cols-5 items-center'>
                     {product.subPics.map((Pic, index) => (
-                        <img id={index} src={Pic.pic} alt="" className='w-full h-full p-2 object-cover cursor-pointer' onClick={() => setMainPic(Pic.pic)}/>
+                        <img id={index} src={Pic.pic} alt="" className='w-full h-full p-1 object-cover cursor-pointer' onClick={() => setMainPic(Pic.pic)}/>
                     ))}
                 </div>
             </div>

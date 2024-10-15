@@ -12,14 +12,14 @@ const Footer = () => {
   };
 
   return (
-    <div className='w-full h-[100px] bg-blue-200'>
-      <div className='w-[80%] mx-auto h-full flex items-center justify-between'>
+    <div className='w-full md:h-[100px] bg-blue-200'>
+      <div className='w-[95%] md:w-[80%] mx-auto h-full flex items-center justify-between'>
         <div>
           <Link to='/'>
-            <img src={pic} className='w-52' alt="" />
+            <img src={pic} className='w-44 md:w-52' alt="" />
           </Link>
         </div>
-        <div>
+        <div className='md:block hidden'>
           <h1 className='text-lg font-semibold text-gray-700 cursor-default'>© 2024 · SANDIES CAKES</h1>
         </div>
         <div className='flex items-center justify-between gap-3'>
@@ -28,6 +28,9 @@ const Footer = () => {
           <FaWhatsapp onClick={handleButtonClick} size={30} className='cursor-pointer hover:text-pink-700'/>
         </div>
       </div>
+      <div className='md:hidden w-full bg-blue-200 pb-2'>
+          <h1 className='text-lg font-semibold text-center text-gray-700 cursor-default'>© 2024 · SANDIES CAKES</h1>
+        </div>
     </div>
   )
 }

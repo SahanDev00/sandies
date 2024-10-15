@@ -4,8 +4,8 @@ import logo from '../Images/logo.png'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import { Link, useLocation } from 'react-router-dom'
 import categories from '../Products/categories'
-import { Link as ScrollLink } from 'react-scroll'
 import { IoIosClose, IoIosMenu } from 'react-icons/io'
+import { HashLink } from 'react-router-hash-link'
 
 const Navbar = () => {
 
@@ -50,13 +50,13 @@ const Navbar = () => {
                             <div className='absolute bg-white/95 w-[250px] border-b border-r border-l shadow group-hover:opacity-100 opacity-0 invisible group-hover:visible duration-500 translate-y-3 group-hover:translate-y-0 transition-transform -left-6'>
                                 <ul className='p-5 h-full w-full space-y-3'>
                                     {categories.map((category, index) => (
-                                        <ScrollLink 
-                                            to={category.name}           
-                                            smooth={true} 
-                                            duration={500} 
-                                            offset={-110}>
+                                        <HashLink smooth={true} scroll={el => {
+                                            const yOffset = -100; // Adjust this value for the offset
+                                            const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                            window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
+                                          }} to={`/#${category.name}`}>
                                             <li key={index} className='text-gray-600 hover:text-pink-400 text-[16px] cursor-pointer my-2 font-medium'> ☆ {category.name}</li>
-                                        </ScrollLink>
+                                        </HashLink>
                                     ))}
                                 </ul>
                             </div>
@@ -92,13 +92,13 @@ const Navbar = () => {
                             <div className={`w-[250px] duration-300 overflow-hidden ${dropDown ? 'h-[270px]' : 'h-0 overflow-hidden'}`}>
                                 <ul className='ml-3 h-full w-full space-y-3'>
                                     {categories.map((category, index) => (
-                                        <ScrollLink 
-                                            to={category.name}           
-                                            smooth={true} 
-                                            duration={500} 
-                                            offset={-110}>
+                                        <HashLink smooth={true} scroll={el => {
+                                            const yOffset = -100; // Adjust this value for the offset
+                                            const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                            window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
+                                          }} to={`/${category.name}`}>
                                             <li key={index} className='text-gray-400 hover:text-pink-400 text-[16px] cursor-pointer my-2 font-medium'> ☆ {category.name}</li>
-                                        </ScrollLink>
+                                        </HashLink>
                                     ))}
                                 </ul>
                             </div>

@@ -18,7 +18,7 @@ const categories = [
         name: 'Butter Cakes'
     },
     {
-        name: 'Custom Design Cakes'
+        name: 'Custom Desisgn Cake'
     },
 ]
 
