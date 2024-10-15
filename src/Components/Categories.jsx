@@ -1,16 +1,44 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import items from '../Products/items'
 import Product from './Product';
 
 const Categories = () => {
 
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const cardRefs = useRef([]);
+
+    useEffect(() => {
+      const currentRefs = cardRefs.current; 
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1, // Trigger when 10% of the card is in view
+      };
+  
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeUp');
+          }
+        });
+      }, options);
+  
+      currentRefs.forEach((card) => {
+        if (card) observer.observe(card);
+      });
+  
+      return () => {
+        if (currentRefs) {
+          currentRefs.forEach((card) => observer.unobserve(card));
+        }
+      };
+    }, []);
 
   return (
     <div className='w-[95%] mx-auto sm:w-full mt-10 bg-gray-100 pb-10'>
         <h1 className='text-4xl sm:text-5xl uppercase text-center my-5 pt-10 font-semibold text-blue-400 font-overpass'>Explore by <span className='text-pink-500'>Category</span></h1>
         {items.map((item, index) => (
-            <div id={item.category} key={index} className='mt-14'>
+            <div id={item.category} ref={(el) => (cardRefs.current[index] = el)} key={index} className='card mt-14'>
                 <h1 className='text-2xl sm:text-3xl uppercase sm:ml-5 my-3 sm:my-5 font-semibold text-pink-400 font-overpass'>{item.category}</h1>
                 <div className='w-[98%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 rounded-md gap-4'>
                     {item.items.map((product, idx) => (  // Loop through the items array
