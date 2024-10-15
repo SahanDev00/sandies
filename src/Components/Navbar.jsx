@@ -51,7 +51,7 @@ const Navbar = () => {
                                 <ul className='p-5 h-full w-full space-y-3'>
                                     {categories.map((category, index) => (
                                         <HashLink smooth={true} scroll={el => {
-                                            const yOffset = -100; // Adjust this value for the offset
+                                            const yOffset = -120; // Adjust this value for the offset
                                             const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                                             window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
                                           }} to={`/#${category.name}`}>
@@ -61,7 +61,7 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </li>
-                        <RiArrowDropDownLine size={30} className='group-hover:text-pink-500 group-hover:rotate-180 duration-500'/>
+                        <RiArrowDropDownLine size={30} className='group-hover:text-pink-500 group-hover:rotate-180 duration-500 '/>
                     </div>
                     <Link to='about-us'>
                         <li className={` hover:text-pink-500 cursor-pointer uppercase ${isActive('/about-us') ? 'text-pink-500' : 'text-black/90'}`}>About Us</li>
