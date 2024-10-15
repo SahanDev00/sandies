@@ -29,7 +29,7 @@ const Hero = () => {
           {
             heading: 'Birthday Cakes',
             text: 'Make birthdays extra special with our custom-designed birthday cakes. Each slice is a gift of flavor and joy!',
-            image: 'https://img.freepik.com/free-photo/delicious-birthday-cake-with-candles_23-2150735002.jpg?t=st=1728632322~exp=1728635922~hmac=8f02f669eed28345ae99d174a3a2c8cffe29a5323e9f6a23f83aab68d63deabd&w=1380',
+            image: 'https://images6.alphacoders.com/135/1350370.png',
           },
           {
             heading: 'Cupcakes',
