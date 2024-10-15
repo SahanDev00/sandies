@@ -120,7 +120,7 @@ const BestSellers = () => {
       
     
   return (
-    <div className='w-full my-5'>
+    <div className='w-full my-5 px-2 md:px-0'>
         <h1 className='text-4xl sm:text-5xl uppercase text-center my-5 font-semibold text-pink-400 font-overpass'>Best Sellers</h1>
             <div className='w-[98%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 rounded-md gap-4'>
                 {bestSellers.map((bestSeller, index) => (

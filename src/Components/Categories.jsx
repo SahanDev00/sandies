@@ -33,7 +33,7 @@ const Categories = () => {
     
 
   return (
-    <div className='w-[95%] mx-auto sm:w-full mt-10 bg-gray-100 pb-10'>
+    <div className='w-full px-2 md:px-0 mx-auto sm:w-full mt-10 bg-gray-100 pb-10'>
         <h1 className='text-4xl sm:text-5xl uppercase text-center my-5 pt-10 font-semibold text-blue-400 font-overpass'>Explore by <span className='text-pink-500'>Category</span></h1>
         {items.map((item, index) => (
             <div id={item.category} ref={(el) => (cardRefs.current[index] = el)} key={index} className='card mt-14'>
