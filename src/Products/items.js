@@ -146,13 +146,13 @@ const items = [
                 price: 4690,
                 description: '1.4KG Chocolate Icing Birthday Cake',
                 colour: '',
-                pic: b1,
+                pic: b2,
                 subPics: [
                     {
-                        pic: b1,
+                        pic: b2,
                     },
                     {
-                        pic: b2,
+                        pic: b1,
                     },
                 ]
             },

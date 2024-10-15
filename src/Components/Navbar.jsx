@@ -96,7 +96,7 @@ const Navbar = () => {
                                             const yOffset = -100; // Adjust this value for the offset
                                             const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
                                             window.scrollTo({ top: yCoordinate, behavior: 'smooth' });
-                                          }} to={`/${category.name}`}>
+                                          }} to={`/#${category.name}`}>
                                             <li key={index} className='text-gray-400 hover:text-pink-400 text-[16px] cursor-pointer my-2 font-medium'> ☆ {category.name}</li>
                                         </HashLink>
                                     ))}

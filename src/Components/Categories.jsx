@@ -17,7 +17,7 @@ const Categories = () => {
                         <div key={idx} className='w-full mt-3 sm:mt-0 h-[300px] sm:h-[350px] xl:h-[450px] rounded-md lg:hover:shadow-lg lg:hover:-translate-y-2 duration-300 cursor-pointer' onClick={() => setSelectedProduct(product)}>
                             <img src={product.pic} className='h-[75%] md:h-[85%] w-full object-cover rounded-t-md' alt="" />
                             <div className={`w-full h-[25%] md:h-[15%] rounded-b-md flex flex-col py-7 md:py-0 justify-center items-center ${product.colour === 'pink' ? 'bg-pink-100' : 'bg-blue-100'}`}>
-                                <h1 className='text-sm md:w-full w-[90%] md:text-[16px] font-medium text-gray-700 uppercase text-center'>{product.name}</h1>
+                                <h1 className='text-sm md:w-[95%] w-[90%] md:text-[16px] font-medium text-gray-700 uppercase text-center'>{product.name}</h1>
                             </div>
                         </div>
                     ))}
