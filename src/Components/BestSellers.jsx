@@ -95,31 +95,29 @@ const BestSellers = () => {
     ]
 
     useEffect(() => {
-        const currentRefs = cardRefs.current; 
-        const options = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0.1, // Trigger when 10% of the card is in view
-        };
-    
+        const currentRefs = cardRefs.current; // Copy current cardRefs
+      
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add('animate-fadeUp');
             }
           });
-        }, options);
-    
+        }, { root: null, rootMargin: '0px', threshold: 0.1 });
+      
         currentRefs.forEach((card) => {
           if (card) observer.observe(card);
         });
-    
+      
         return () => {
-          if (currentRefs) {
-            currentRefs.forEach((card) => observer.unobserve(card));
-          }
+          currentRefs.forEach((card) => {
+            if (card instanceof Element) {
+              observer.unobserve(card);
+            }
+          });
         };
       }, []);
+      
     
   return (
     <div className='w-full my-5'>
