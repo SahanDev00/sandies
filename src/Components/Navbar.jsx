@@ -23,7 +23,7 @@ const Navbar = () => {
 
     const handleButtonClick = () => {
         const message = `Hello, I'm here from the Sandies Website and I would Like to know more details.`;
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=94717520661&text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=94703319086&text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
       };
 

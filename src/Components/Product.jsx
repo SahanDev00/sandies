@@ -5,7 +5,7 @@ const Product = ({ product }) => {
 
     const handleOrderClick = () => {
         const message = `Hello, I would like to order the following product:\n\nProduct Name: ${product.name}`;
-        const whatsappUrl = `https://api.whatsapp.com/send?phone=94717520661&text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=94703319086&text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
       };
 
