@@ -124,7 +124,7 @@ const BestSellers = () => {
         <h1 className='text-4xl sm:text-5xl uppercase text-center my-5 font-semibold text-pink-400 font-overpass'>Best Sellers</h1>
             <div className='w-[98%] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 rounded-md gap-4'>
                 {bestSellers.map((bestSeller, index) => (
-                    <div ref={(el) => (cardRefs.current[index] = el)} key={index} className='card w-full h-[300px] mb-8 md:mb-0 sm:h-[300px] xl:h-[450px] rounded-md hover:shadow-lg duration-300 cursor-pointer' onClick={() => setSelectedProduct(bestSeller)}>
+                    <div ref={(el) => (cardRefs.current[index] = el)} key={index} className='card w-full h-[250px] mb-8 md:mb-0 sm:h-[300px] xl:h-[450px] rounded-md hover:shadow-lg duration-300 cursor-pointer' onClick={() => setSelectedProduct(bestSeller)}>
                         <img src={bestSeller.pic} className='h-[85%] object-cover rounded-t-md w-full' alt="" />
                         <div className={`w-full h-[25%] md:h-[15%] rounded-b-md flex flex-col justify-center items-center py-7 md:py-0 ${bestSeller.colour === 'pink' ? 'bg-pink-100' : 'bg-blue-100'}`}>
                             <h1 className='text-sm md:w-[95%] w-[90%] md:text-[16px] font-medium text-gray-700 uppercase text-center font-poppins'>{bestSeller.name}</h1>
